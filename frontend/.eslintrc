@@ -1,0 +1,112 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+	"settings": {
+		"react": {
+			"version": "16.13.0"
+		}
+	},
+	"extends": [
+		"airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard"
+	],
+	"rules": {
+    "linebreak-style": "error",
+    // "eslint linebreak-style": [0, "error", "windows"],
+    "no-multiple-empty-lines": [2, {"max": 2, "maxBOF": 0}],
+		"react-hooks/rules-of-hooks": "error",
+		"no-param-reassign": 0,
+		"react-hooks/exhaustive-deps": "warn",
+		"global-require": 0,
+		"import/prefer-default-export": 0,
+		"comma-dangle": 0,
+		"no-trailing-spaces": 0,
+		"jsx-a11y/href-no-hash": [0],
+		"jsx-a11y/label-has-associated-control": 0,
+		"jsx-a11y/label-has-for": 0,
+		"no-extend-native": [
+			"error",
+			{
+				"exceptions": ["Date"]
+			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+		"prettier/prettier": ["error", {}, {
+      "usePrettierrc": true
+    }],
+		"no-unused-expressions": [
+			"error",
+			{
+				"allowTaggedTemplates": true,
+				"allowTernary": true
+			}
+		],
+		"no-unused-vars": [
+			0,
+			{
+				"argsIgonrePattern": "res|next|^err"
+			}
+		],
+		"import/no-named-as-default": 0,
+		"react/prop-types": [1],
+		"arrow-body-style": [2, "as-needed"],
+		"react/jsx-no-undef": [
+			2,
+			{
+				"allowGlobals": true
+			}
+		],
+		"react/jsx-wrap-multilines": 0,
+		"radix": 0,
+		"no-else-return": 0,
+		"new-cap": 0,
+		"import-helpers/order-imports": [
+			"warn",
+			{
+        "newlinesBetween": "always", // new line between groups
+				"groups": [
+          "/^react/",
+          "module",
+          "/^@shared/",
+          ["parent", "sibling", "index"]
+        ],
+				"alphabetize": { "order": "asc", "ignoreCase": true }
+			}
+		]
+	},
+	"plugins": [
+		"prettier",
+		"jsx-a11y",
+		"import",
+		"import-helpers",
+    "react-hooks",
+    "react"
+	],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"modules": true,
+      "experimentalObjectRestSpread": true,
+      "useJSXTextNode": true
+		}
+	}
+}
